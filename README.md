@@ -2,7 +2,17 @@
 
 An immersive hand-gesture controlled web game where you channel ancient kung fu techniques to command the forces of wind. Using MediaPipe hand tracking and Three.js, players become masters of wind, manipulating a serene 3D landscape with graceful hand movements.
 
-# 🚀 How to Implement It in 30 Minutes
+## 🎮 Play Now & Watch Demo
+
+**🌐 Live Demo:** https://licanhua.github.io/WindMaster-KungFu/
+
+**📹 Video Demo:**
+
+[![Wind Master Demo](https://img.youtube.com/vi/oAExqDb5hA4/maxresdefault.jpg)](https://youtube.com/shorts/oAExqDb5hA4?feature=share)
+
+*Click to watch the demo on YouTube*
+
+## 🚀 From Idea to GitHub in Under 30 Minute
 All code is generated using GitHub Copilot.
 - Draft the Idea: Write your initial concept in Claude Desktop and let it generate the requirements. Consolidate everything into [Prompt.txt](./Prompt.txt).
 - Trigger Copilot: Open Prompt.txt in GitHub Copilot and simply type: Implement it.
