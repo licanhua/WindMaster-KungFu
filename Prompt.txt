@@ -1,0 +1,20 @@
+Create a web-based hand gesture controlled game called "Wind Master" where players use their hand movements to control wind in a 3D environment. 
+
+Requirements:
+
+1. Use MediaPipe Hands for real-time hand tracking
+2. Use Three.js for 3D graphics with a serene natural landscape (rolling hills, trees, grass)
+3. Implement these gesture controls:
+   - Open palm with TILT: Rotate palm left/right to control wind direction horizontally (like steering)
+   - Open palm UP/DOWN: Move hand vertically to control wind up/down
+   - Closed fist + CIRCULAR motion: Create a vortex/tornado effect
+4. Add 2000+ wind particles that respond to wind direction and vortex
+5. Make trees bend and sway based on wind direction and vortex intensity
+6. Show a stickman visualization of the hand pose in the top-right corner
+7. Display current gesture state in the UI
+8. Add dynamic wind sound effects:
+   - Normal wind: filtered white noise that changes pitch/volume with wind strength
+   - Vortex: deep rumbling sound with frequency modulation
+9. Include a tutorial overlay that explains the controls
+10. Use a Chinese-inspired aesthetic with calligraphy-style fonts and minimalist design
+11. Make the controls less sensitive - wind strength should be moderate, not overpowering

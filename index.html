@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌬️ Wind Master - Kung Fu Wind Control Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>🌬️ Wind Master</h1>
+            <p>Loading ancient techniques...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <!-- Video feed for hand tracking (hidden) -->
+        <video id="webcam" autoplay playsinline></video>
+        
+        <!-- Canvas for MediaPipe hand detection visualization -->
+        <canvas id="hand-canvas"></canvas>
+        
+        <!-- Stickman pose display -->
+        <div id="stickman-container">
+            <canvas id="stickman-canvas"></canvas>
+            <div class="stickman-label">Your Stance</div>
+        </div>
+
+        <!-- 3D Scene -->
+        <canvas id="scene-canvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div class="top-left">
+                <h2 class="game-title">Wind Master</h2>
+                <div class="mode-indicator">Zen Mode</div>
+            </div>
+            
+            <div class="top-right">
+                <div class="gesture-indicator">
+                    <div class="gesture-label">Current Gesture</div>
+                    <div id="gesture-display">Open Palm</div>
+                </div>
+            </div>
+            
+            <div class="bottom-center">
+                <div class="control-hints">
+                    <div class="hint">✋ Open Palm → Tilt to Control Wind Direction</div>
+                    <div class="hint">✊ Closed Fist + Circle → Create Vortex</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tutorial Overlay -->
+        <div id="tutorial-overlay" class="tutorial-active">
+            <div class="tutorial-content">
+                <h2>Welcome, Wind Master</h2>
+                <p>Place your hand in front of the camera to begin</p>
+                <div class="tutorial-steps">
+                    <div class="step">
+                        <div class="step-icon">✋</div>
+                        <div class="step-text">Show your open palm</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">↔️</div>
+                        <div class="step-text">Tilt palm left/right like steering</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">✊🔄</div>
+                        <div class="step-text">Close fist and rotate for vortex</div>
+                    </div>
+                </div>
+                <button id="start-button" class="start-btn">Begin Your Journey</button>
+            </div>
+        </div>
+
+        <!-- Settings Button -->
+        <button id="settings-button" class="icon-button">⚙️</button>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+    <!-- Game Scripts -->
+    <script type="module" src="game.js"></script>
+</body>
+</html>
